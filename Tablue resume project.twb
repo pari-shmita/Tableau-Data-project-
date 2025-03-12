@@ -1,0 +1,1801 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='WorldCups+ (world_cup_results)' inline='true' name='federated.1q3w8w2053wlex1ftok4v0hrvndp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='world_cup_results' name='excel-direct.1ue1iiv1cfzao71acx9o10hq85nq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/HP/Downloads/world_cup_results.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.1ue1iiv1cfzao71acx9o10hq85nq' name='WorldCups' table='[WorldCups$]' type='table'>
+            <columns gridOrigin='A1:J21:no:A1:J21:0' header='yes' outcome='2'>
+              <column datatype='integer' name='Year' ordinal='0' />
+              <column datatype='string' name='Country' ordinal='1' />
+              <column datatype='string' name='Winner' ordinal='2' />
+              <column datatype='string' name='Runners-Up' ordinal='3' />
+              <column datatype='string' name='Third' ordinal='4' />
+              <column datatype='string' name='Fourth' ordinal='5' />
+              <column datatype='integer' name='GoalsScored' ordinal='6' />
+              <column datatype='integer' name='QualifiedTeams' ordinal='7' />
+              <column datatype='integer' name='MatchesPlayed' ordinal='8' />
+              <column datatype='string' name='Attendance' ordinal='9' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1ue1iiv1cfzao71acx9o10hq85nq' name='World Cup - Tableau format' table='[&apos;World Cup - Tableau format$&apos;]' type='table'>
+            <columns gridOrigin='A1:M1705:no:A1:M1705:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Year' ordinal='0' />
+              <column datatype='integer' name='Game #' ordinal='1' />
+              <column datatype='date' name='Date' ordinal='2' />
+              <column datatype='string' name='Time' ordinal='3' />
+              <column datatype='string' name='Round' ordinal='4' />
+              <column datatype='string' name='Stadium' ordinal='5' />
+              <column datatype='string' name='City' ordinal='6' />
+              <column datatype='string' name='Country' ordinal='7' />
+              <column datatype='string' name='Team' ordinal='8' />
+              <column datatype='integer' name='Team G' ordinal='9' />
+              <column datatype='string' name='Opponent' ordinal='10' />
+              <column datatype='integer' name='Opponent G' ordinal='11' />
+              <column datatype='string' name='Observation' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1ue1iiv1cfzao71acx9o10hq85nq' name='WorldCupMatches' table='[WorldCupMatches$]' type='table'>
+            <columns gridOrigin='A1:L853:no:A1:L853:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Year' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='string' name='Time' ordinal='2' />
+              <column datatype='string' name='Round' ordinal='3' />
+              <column datatype='string' name='Stadium' ordinal='4' />
+              <column datatype='string' name='City' ordinal='5' />
+              <column datatype='string' name='Country' ordinal='6' />
+              <column datatype='string' name='HomeTeam' ordinal='7' />
+              <column datatype='integer' name='HomeGoals' ordinal='8' />
+              <column datatype='integer' name='AwayGoals' ordinal='9' />
+              <column datatype='string' name='AwayTeam' ordinal='10' />
+              <column datatype='string' name='Observation' ordinal='11' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Attendance]' value='[WorldCups].[Attendance]' />
+          <map key='[AwayGoals]' value='[WorldCupMatches].[AwayGoals]' />
+          <map key='[AwayTeam]' value='[WorldCupMatches].[AwayTeam]' />
+          <map key='[City (World Cup - Tableau format)]' value='[World Cup - Tableau format].[City]' />
+          <map key='[City]' value='[WorldCupMatches].[City]' />
+          <map key='[Country (World Cup - Tableau format)]' value='[World Cup - Tableau format].[Country]' />
+          <map key='[Country (WorldCupMatches)]' value='[WorldCupMatches].[Country]' />
+          <map key='[Country]' value='[WorldCups].[Country]' />
+          <map key='[Date (World Cup - Tableau format)]' value='[World Cup - Tableau format].[Date]' />
+          <map key='[Date]' value='[WorldCupMatches].[Date]' />
+          <map key='[Fourth]' value='[WorldCups].[Fourth]' />
+          <map key='[Game #]' value='[World Cup - Tableau format].[Game #]' />
+          <map key='[GoalsScored]' value='[WorldCups].[GoalsScored]' />
+          <map key='[HomeGoals]' value='[WorldCupMatches].[HomeGoals]' />
+          <map key='[HomeTeam]' value='[WorldCupMatches].[HomeTeam]' />
+          <map key='[MatchesPlayed]' value='[WorldCups].[MatchesPlayed]' />
+          <map key='[Observation (World Cup - Tableau format)]' value='[World Cup - Tableau format].[Observation]' />
+          <map key='[Observation]' value='[WorldCupMatches].[Observation]' />
+          <map key='[Opponent G]' value='[World Cup - Tableau format].[Opponent G]' />
+          <map key='[Opponent]' value='[World Cup - Tableau format].[Opponent]' />
+          <map key='[QualifiedTeams]' value='[WorldCups].[QualifiedTeams]' />
+          <map key='[Round (World Cup - Tableau format)]' value='[World Cup - Tableau format].[Round]' />
+          <map key='[Round]' value='[WorldCupMatches].[Round]' />
+          <map key='[Runners-Up]' value='[WorldCups].[Runners-Up]' />
+          <map key='[Stadium (World Cup - Tableau format)]' value='[World Cup - Tableau format].[Stadium]' />
+          <map key='[Stadium]' value='[WorldCupMatches].[Stadium]' />
+          <map key='[Team G]' value='[World Cup - Tableau format].[Team G]' />
+          <map key='[Team]' value='[World Cup - Tableau format].[Team]' />
+          <map key='[Third]' value='[WorldCups].[Third]' />
+          <map key='[Time (World Cup - Tableau format)]' value='[World Cup - Tableau format].[Time]' />
+          <map key='[Time]' value='[WorldCupMatches].[Time]' />
+          <map key='[Winner]' value='[WorldCups].[Winner]' />
+          <map key='[Year (World Cup - Tableau format)]' value='[World Cup - Tableau format].[Year]' />
+          <map key='[Year (WorldCupMatches)]' value='[WorldCupMatches].[Year]' />
+          <map key='[Year]' value='[WorldCups].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:J21:no:A1:J21:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:M1705:no:A1:M1705:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:L853:no:A1:L853:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Winner</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Winner]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>Winner</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Runners-Up</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Runners-Up]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>Runners-Up</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Third</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Third]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>Third</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fourth</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Fourth]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>Fourth</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GoalsScored</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[GoalsScored]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>GoalsScored</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>QualifiedTeams</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[QualifiedTeams]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>QualifiedTeams</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MatchesPlayed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MatchesPlayed]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>MatchesPlayed</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Attendance</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Attendance]</local-name>
+            <parent-name>[WorldCups]</parent-name>
+            <remote-alias>Attendance</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (World Cup - Tableau format)]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Game #</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Game #]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Game #</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date (World Cup - Tableau format)]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Time (World Cup - Tableau format)]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Time</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Round</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Round (World Cup - Tableau format)]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Round</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stadium</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stadium (World Cup - Tableau format)]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Stadium</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City (World Cup - Tableau format)]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country (World Cup - Tableau format)]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Team</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Team]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Team</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Team G</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Team G]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Team G</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Opponent</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Opponent]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Opponent</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Opponent G</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Opponent G]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Opponent G</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Observation</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Observation (World Cup - Tableau format)]</local-name>
+            <parent-name>[World Cup - Tableau format]</parent-name>
+            <remote-alias>Observation</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (WorldCupMatches)]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Time]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>Time</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Round</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Round]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>Round</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stadium</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stadium]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>Stadium</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country (WorldCupMatches)]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HomeTeam</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[HomeTeam]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>HomeTeam</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HomeGoals</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HomeGoals]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>HomeGoals</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AwayGoals</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AwayGoals]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>AwayGoals</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AwayTeam</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[AwayTeam]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>AwayTeam</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Observation</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Observation]</local-name>
+            <parent-name>[WorldCupMatches]</parent-name>
+            <remote-alias>Observation</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Away Goals' datatype='integer' name='[AwayGoals]' role='measure' type='quantitative' />
+      <column caption='Away Team' datatype='string' name='[AwayTeam]' role='dimension' type='nominal' />
+      <column caption='finals' datatype='string' name='[Calculation_121878716565000192]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Round (World Cup - Tableau format)] = &apos;Final&apos; THEN [Round (World Cup - Tableau format)] END' />
+      </column>
+      <column caption='Semi-Finals' datatype='string' name='[Calculation_121878716570791937]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Round (World Cup - Tableau format)]= &apos;Semi-final&apos; THEN [Round (World Cup - Tableau format)]END' />
+      </column>
+      <column datatype='string' name='[City (World Cup - Tableau format)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country (World Cup - Tableau format)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[Country (WorldCupMatches)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Goals Scored' datatype='integer' name='[GoalsScored]' role='measure' type='quantitative' />
+      <column caption='Home Goals' datatype='integer' name='[HomeGoals]' role='measure' type='quantitative' />
+      <column caption='Home Team' datatype='string' name='[HomeTeam]' role='dimension' type='nominal' />
+      <column caption='Matches Played' datatype='integer' name='[MatchesPlayed]' role='measure' type='quantitative' />
+      <column caption='Qualified Teams' datatype='integer' name='[QualifiedTeams]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year (World Cup - Tableau format)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year (WorldCupMatches)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='World Cup - Tableau format' datatype='table' name='[__tableau_internal_object_id__].[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]' role='measure' type='quantitative' />
+      <column caption='WorldCupMatches' datatype='table' name='[__tableau_internal_object_id__].[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]' role='measure' type='quantitative' />
+      <column caption='WorldCups' datatype='table' name='[__tableau_internal_object_id__].[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/HP/AppData/Local/Temp/TableauTemp/#TableauTemp_0mgp2pp0r7g9tw13ni9ns1t6jz1m.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/27/2025 08:15:08 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='WorldCups_D507C4ADA0624F6E8E9054438EA73A87' table='[Extract].[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]' type='table' />
+            <relation name='World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B' table='[Extract].[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]' type='table' />
+            <relation name='WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64' table='[Extract].[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Attendance]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[Attendance]' />
+            <map key='[AwayGoals]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[AwayGoals]' />
+            <map key='[AwayTeam]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[AwayTeam]' />
+            <map key='[City (World Cup - Tableau format)]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[City]' />
+            <map key='[City]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[City]' />
+            <map key='[Country (World Cup - Tableau format)]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Country]' />
+            <map key='[Country (WorldCupMatches)]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[Country]' />
+            <map key='[Country]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[Country]' />
+            <map key='[Date (World Cup - Tableau format)]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Date]' />
+            <map key='[Date]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[Date]' />
+            <map key='[Fourth]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[Fourth]' />
+            <map key='[Game #]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Game #]' />
+            <map key='[GoalsScored]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[GoalsScored]' />
+            <map key='[HomeGoals]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[HomeGoals]' />
+            <map key='[HomeTeam]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[HomeTeam]' />
+            <map key='[MatchesPlayed]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[MatchesPlayed]' />
+            <map key='[Observation (World Cup - Tableau format)]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Observation]' />
+            <map key='[Observation]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[Observation]' />
+            <map key='[Opponent G]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Opponent G]' />
+            <map key='[Opponent]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Opponent]' />
+            <map key='[QualifiedTeams]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[QualifiedTeams]' />
+            <map key='[Round (World Cup - Tableau format)]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Round]' />
+            <map key='[Round]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[Round]' />
+            <map key='[Runners-Up]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[Runners-Up]' />
+            <map key='[Stadium (World Cup - Tableau format)]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Stadium]' />
+            <map key='[Stadium]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[Stadium]' />
+            <map key='[Team G]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Team G]' />
+            <map key='[Team]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Team]' />
+            <map key='[Third]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[Third]' />
+            <map key='[Time (World Cup - Tableau format)]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Time]' />
+            <map key='[Time]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[Time]' />
+            <map key='[Winner]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[Winner]' />
+            <map key='[Year (World Cup - Tableau format)]' value='[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B].[Year]' />
+            <map key='[Year (WorldCupMatches)]' value='[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64].[Year]' />
+            <map key='[Year]' value='[WorldCups_D507C4ADA0624F6E8E9054438EA73A87].[Year]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>WorldCups</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>1</ordinal>
+              <family>WorldCups</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Winner</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Winner]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>Winner</remote-alias>
+              <ordinal>2</ordinal>
+              <family>WorldCups</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Runners-Up</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Runners-Up]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>Runners-Up</remote-alias>
+              <ordinal>3</ordinal>
+              <family>WorldCups</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Third</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Third]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>Third</remote-alias>
+              <ordinal>4</ordinal>
+              <family>WorldCups</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fourth</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Fourth]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>Fourth</remote-alias>
+              <ordinal>5</ordinal>
+              <family>WorldCups</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GoalsScored</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[GoalsScored]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>GoalsScored</remote-alias>
+              <ordinal>6</ordinal>
+              <family>WorldCups</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>QualifiedTeams</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[QualifiedTeams]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>QualifiedTeams</remote-alias>
+              <ordinal>7</ordinal>
+              <family>WorldCups</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MatchesPlayed</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MatchesPlayed]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>MatchesPlayed</remote-alias>
+              <ordinal>8</ordinal>
+              <family>WorldCups</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Attendance</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Attendance]</local-name>
+              <parent-name>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</parent-name>
+              <remote-alias>Attendance</remote-alias>
+              <ordinal>9</ordinal>
+              <family>WorldCups</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year (World Cup - Tableau format)]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>10</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Game #</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Game #]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Game #</remote-alias>
+              <ordinal>11</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>825</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date (World Cup - Tableau format)]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>12</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>333</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Time (World Cup - Tableau format)]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Time</remote-alias>
+              <ordinal>13</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Round</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Round (World Cup - Tableau format)]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Round</remote-alias>
+              <ordinal>14</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Stadium</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Stadium (World Cup - Tableau format)]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Stadium</remote-alias>
+              <ordinal>15</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>182</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City (World Cup - Tableau format)]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>16</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>151</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country (World Cup - Tableau format)]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>17</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Team]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Team</remote-alias>
+              <ordinal>18</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>83</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Team G</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Team G]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Team G</remote-alias>
+              <ordinal>19</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Opponent</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Opponent]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Opponent</remote-alias>
+              <ordinal>20</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>84</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Opponent G</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Opponent G]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Opponent G</remote-alias>
+              <ordinal>21</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Observation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Observation (World Cup - Tableau format)]</local-name>
+              <parent-name>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</parent-name>
+              <remote-alias>Observation</remote-alias>
+              <ordinal>22</ordinal>
+              <family>World Cup - Tableau format</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year (WorldCupMatches)]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>23</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>24</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>330</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Time]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>Time</remote-alias>
+              <ordinal>25</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Round</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Round]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>Round</remote-alias>
+              <ordinal>26</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Stadium</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Stadium]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>Stadium</remote-alias>
+              <ordinal>27</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>181</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>28</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>151</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country (WorldCupMatches)]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>29</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HomeTeam</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[HomeTeam]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>HomeTeam</remote-alias>
+              <ordinal>30</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>78</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HomeGoals</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[HomeGoals]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>HomeGoals</remote-alias>
+              <ordinal>31</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AwayGoals</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AwayGoals]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>AwayGoals</remote-alias>
+              <ordinal>32</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AwayTeam</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AwayTeam]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>AwayTeam</remote-alias>
+              <ordinal>33</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>83</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Observation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Observation]</local-name>
+              <parent-name>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</parent-name>
+              <remote-alias>Observation</remote-alias>
+              <ordinal>34</ordinal>
+              <family>WorldCupMatches</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>43</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Year' />
+        <field-sort-custom-order field='Country' />
+        <field-sort-custom-order field='Winner' />
+        <field-sort-custom-order field='Runners-Up' />
+        <field-sort-custom-order field='Third' />
+        <field-sort-custom-order field='Fourth' />
+        <field-sort-custom-order field='GoalsScored' />
+        <field-sort-custom-order field='QualifiedTeams' />
+        <field-sort-custom-order field='MatchesPlayed' />
+        <field-sort-custom-order field='Attendance' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='World Cup - Tableau format' id='World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B'>
+            <properties context=''>
+              <relation connection='excel-direct.1ue1iiv1cfzao71acx9o10hq85nq' name='World Cup - Tableau format' table='[&apos;World Cup - Tableau format$&apos;]' type='table'>
+                <columns gridOrigin='A1:M1705:no:A1:M1705:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='integer' name='Game #' ordinal='1' />
+                  <column datatype='date' name='Date' ordinal='2' />
+                  <column datatype='string' name='Time' ordinal='3' />
+                  <column datatype='string' name='Round' ordinal='4' />
+                  <column datatype='string' name='Stadium' ordinal='5' />
+                  <column datatype='string' name='City' ordinal='6' />
+                  <column datatype='string' name='Country' ordinal='7' />
+                  <column datatype='string' name='Team' ordinal='8' />
+                  <column datatype='integer' name='Team G' ordinal='9' />
+                  <column datatype='string' name='Opponent' ordinal='10' />
+                  <column datatype='integer' name='Opponent G' ordinal='11' />
+                  <column datatype='string' name='Observation' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B' table='[Extract].[World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B]' type='table' />
+            </properties>
+          </object>
+          <object caption='WorldCupMatches' id='WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64'>
+            <properties context=''>
+              <relation connection='excel-direct.1ue1iiv1cfzao71acx9o10hq85nq' name='WorldCupMatches' table='[WorldCupMatches$]' type='table'>
+                <columns gridOrigin='A1:L853:no:A1:L853:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='date' name='Date' ordinal='1' />
+                  <column datatype='string' name='Time' ordinal='2' />
+                  <column datatype='string' name='Round' ordinal='3' />
+                  <column datatype='string' name='Stadium' ordinal='4' />
+                  <column datatype='string' name='City' ordinal='5' />
+                  <column datatype='string' name='Country' ordinal='6' />
+                  <column datatype='string' name='HomeTeam' ordinal='7' />
+                  <column datatype='integer' name='HomeGoals' ordinal='8' />
+                  <column datatype='integer' name='AwayGoals' ordinal='9' />
+                  <column datatype='string' name='AwayTeam' ordinal='10' />
+                  <column datatype='string' name='Observation' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64' table='[Extract].[WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64]' type='table' />
+            </properties>
+          </object>
+          <object caption='WorldCups' id='WorldCups_D507C4ADA0624F6E8E9054438EA73A87'>
+            <properties context=''>
+              <relation connection='excel-direct.1ue1iiv1cfzao71acx9o10hq85nq' name='WorldCups' table='[WorldCups$]' type='table'>
+                <columns gridOrigin='A1:J21:no:A1:J21:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='string' name='Country' ordinal='1' />
+                  <column datatype='string' name='Winner' ordinal='2' />
+                  <column datatype='string' name='Runners-Up' ordinal='3' />
+                  <column datatype='string' name='Third' ordinal='4' />
+                  <column datatype='string' name='Fourth' ordinal='5' />
+                  <column datatype='integer' name='GoalsScored' ordinal='6' />
+                  <column datatype='integer' name='QualifiedTeams' ordinal='7' />
+                  <column datatype='integer' name='MatchesPlayed' ordinal='8' />
+                  <column datatype='string' name='Attendance' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='WorldCups_D507C4ADA0624F6E8E9054438EA73A87' table='[Extract].[WorldCups_D507C4ADA0624F6E8E9054438EA73A87]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Country]' />
+              <expression op='[Country (World Cup - Tableau format)]' />
+            </expression>
+            <first-end-point object-id='WorldCups_D507C4ADA0624F6E8E9054438EA73A87' />
+            <second-end-point object-id='World Cup - Tableau format_F55299EF247146CBA9D4C1ED8DDF051B' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Country]' />
+              <expression op='[Country (WorldCupMatches)]' />
+            </expression>
+            <first-end-point object-id='WorldCups_D507C4ADA0624F6E8E9054438EA73A87' />
+            <second-end-point object-id='WorldCupMatches_044952B58AEC465494EA8BD9F4E79E64' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Teams by total finals and semi-finals'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WorldCups+ (world_cup_results)' name='federated.1q3w8w2053wlex1ftok4v0hrvndp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1q3w8w2053wlex1ftok4v0hrvndp'>
+            <column caption='finals' datatype='string' name='[Calculation_121878716565000192]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Round (World Cup - Tableau format)] = &apos;Final&apos; THEN [Round (World Cup - Tableau format)] END' />
+            </column>
+            <column caption='Semi-Finals' datatype='string' name='[Calculation_121878716570791937]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Round (World Cup - Tableau format)]= &apos;Semi-final&apos; THEN [Round (World Cup - Tableau format)]END' />
+            </column>
+            <column datatype='string' name='[Round (World Cup - Tableau format)]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Team]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_121878716565000192]' derivation='Count' name='[cnt:Calculation_121878716565000192:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_121878716570791937]' derivation='Count' name='[cnt:Calculation_121878716570791937:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Round (World Cup - Tableau format)]' derivation='None' name='[none:Round (World Cup - Tableau format):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Team]' derivation='None' name='[none:Team:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Round (World Cup - Tableau format):nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Round (World Cup - Tableau format):nk]' member='&quot;Final&quot;' />
+              <groupfilter function='member' level='[none:Round (World Cup - Tableau format):nk]' member='&quot;Semi-finals&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Round (World Cup - Tableau format):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1q3w8w2053wlex1ftok4v0hrvndp].[cnt:Calculation_121878716570791937:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1q3w8w2053wlex1ftok4v0hrvndp].[cnt:Calculation_121878716565000192:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Team:nk]</rows>
+        <cols>([federated.1q3w8w2053wlex1ftok4v0hrvndp].[cnt:Calculation_121878716570791937:qk] + [federated.1q3w8w2053wlex1ftok4v0hrvndp].[cnt:Calculation_121878716565000192:qk])</cols>
+      </table>
+      <simple-id uuid='{53275F32-2EE0-4485-B65B-E6DB0B7D465D}' />
+    </worksheet>
+    <worksheet name='countries won world cup'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='WorldCups+ (world_cup_results)' name='federated.1q3w8w2053wlex1ftok4v0hrvndp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1q3w8w2053wlex1ftok4v0hrvndp'>
+            <column datatype='string' name='[Winner]' role='dimension' type='nominal' />
+            <column-instance column='[Winner]' derivation='Count' name='[cnt:Winner:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Winner]' derivation='None' name='[none:Winner:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Winner:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1q3w8w2053wlex1ftok4v0hrvndp].[cnt:Winner:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#ffffff' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='border-color' value='#ffffff' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='stroke-color' scope='cols' value='#ffffff' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#00aa00' />
+            <format attr='border-color' value='#ffffff' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1q3w8w2053wlex1ftok4v0hrvndp].[cnt:Winner:qk]' />
+              <text column='[federated.1q3w8w2053wlex1ftok4v0hrvndp].[cnt:Winner:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Winner:nk]</cols>
+      </table>
+      <simple-id uuid='{50F6193B-AAAE-4BF0-BBC7-8486630BA460}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='countries won world cup'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Winner:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A2BFF499-DF61-4E67-BA0A-189CDCF369A1}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Teams by total finals and semi-finals'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Calculation_121878716565000192:nk]</field>
+            <field>[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Calculation_121878716570791937:nk]</field>
+            <field>[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Round (World Cup - Tableau format):nk]</field>
+            <field>[federated.1q3w8w2053wlex1ftok4v0hrvndp].[none:Team:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B3ECFA1F-C8A0-49F4-ABB5-F0BF83B83EFF}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Teams by total finals and semi-finals' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='65' name='countries won world cup' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABBCAYAAACHMKt6AAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAEg0lEQVR4nO3dX2hbVRwH8O8NGZTGlLaxXaRlXUcbZnW0YehopnuY1JkIsgopyJ4skiCN
+      rI/FCUaoUhA0lfah8UmwUJhbN8WkZRa0iE6dbEVXalNW/1CTIpKxxnRxgeNDktKkd0mEJHft
+      +X7gvBxOcn433O+9597bchUhhACRpHRaF0CkJQaApMYAkNT0uR2KomhRB5EmeAYgqTEAJDUG
+      gKRWMAB8TEB7Gc8AJDUGgKTGAJDUGACSGgNAUmMASGoMAEmNASCpMQAkNQaApMYAkNQYAJIa
+      A0BSYwBIagwASY0BIKkxACQ1BoCkxgCQ1BgAkhoDQFJjAEhqDABJjQHYzhWAECK73dvAXzdn
+      8PbplgrOH4ALAGCDLyQgRAg+W/mnlxEDUIj+ITzccQqvn5+G94jWxVCpMQBqgm4oigJFUWAw
+      OzCxAkBvxZPdZZ7X70jP64C/zFNRCgOQVy1Mj1lx2AQgeR3ff5vqdQVSy6OAC2hxXcSfmwIh
+      nw2AGQ7vNK7dimIzvYTajN7ExQErqpH92eyWXuLYfAgJARHygSueymAA1Ngn0jtmFL/PvYWj
+      sXmMOnvh/SlnXMe7mBnvxSNVmY5DePbMaRxtrUWmq6q2A71jH+Fc3uVTEvf+LfVGUDEYgIL0
+      qKoz40BT/dZRPKNnwAPTl+fwtNmA9sFvANzCBc8zePRAXWopU/c4hr8DgCOwppdPfoeSXuYc
+      hDsYBZDE0qgbb16r5DZRBgOgZusawACz1YXLdyzoHfsM7/dkD9u4chZP9LyDr9fj6Z47iLX1
+      4+OvVlNLoOjPeOOY2gTVOOGbwbjdiKUxO7oH5xFXG0ZlxwDkFcf6jQ/x3vkVAE04+Xz2yvzq
+      JT9+297xoh9zY2dwaMmLbrMBiqLAHdz5rS2uT3Dp7GFsBAfw3Gtf4HY5N4HyYgAKqN5vx0un
+      DgIANm7/nXes7cQx1AGIh0NYXgf2P/UKetqzx7S4LuOHcTsQdMPqyAkQVdyOl+QR0hfBE9l9
+      yev49MIveT92YzGEJNrQ1P85/ulXG/EyPhh/AQ361By/bs2xgtHj7RgsQen0//AMUEgyhj9+
+      nMTg8ZM77wLliPtfxcB0GHcB4G4Y86NOeK9sH7EP+3jIeaAoIucdSLmvSRVC8NWptGfxDEBS
+      YwBIagwASY0BIKkVdU+C7wqmvaqoAPAuEFVS5oBbif2OSyCSGgNAUmMASGoMAEmNASixyclJ
+      lX95FHA6nVqXRir4t0AlZDQaEQgEEA6H0dfXp3U5uxbvAu1SNTU1aG5uxuLiotalUJEYgBIy
+      mUwwGo1YXl7WuhQqEgNQQo2NjTAYDFvXAYlEAnNzc+jq6tK6NLofkQNAVlPrYyu+WSwWEYlE
+      xPDwsOa17JZ2v32xHI1ngDKLRCJYXV2FxWLRuhRSwQCUUH19PXS67J/UbDajtbUVCwsLGlVF
+      +TAAJeTxeBAMBtHZ2QmdToeGhgaMjIwgFothampK6/JIDa8BSteMRqMYGhoSa2trQgghEomE
+      mJ2dFW1tbZrXtptaJa8B+CCMHjiVfBD2H74oDsvEvKSNAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
